@@ -1,0 +1,11 @@
+This is a minimal example on how to set up a libfuzzer project I usually clone this to the repo, modify it according to the target's build system. Used for v8 and gecko with fuzzilli as well as chrome dependencies and virtualbox.
+
+v8 and gecko: follow the instructions in the fuzzilli repo, run the target fuzzbuild with the same params as in the makefile, then we can examine the actual js coverage and adjust the fuzzer
+
+chrome dependencies (e.g angle): Same setup as with oss-fuzz except you integrate either this or just integrate the project with oss-fuzz and use fuzz-introspector.
+
+virtualbox: custom fuzzers
+- http://blog.paulch.ru/2020-07-26-hunting-for-bugs-in-virtualbox-first-take.html
+- https://blog.doyensec.com/2022/04/26/vbox-fuzzing.html
+
+When you get the build with libfuzzer done then you can integrate this ez pz.

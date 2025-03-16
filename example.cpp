@@ -5,7 +5,7 @@
 int parse_input(const uint8_t *data, size_t size) {
     if (size < 5) return 0; 
     
-    if (memcmp(data, "FFFF", 4) != 0) return 0;
+    if (memcmp(data, "FPFF", 4) != 0) return 0;
     
     char buf[32] = {0};
     size_t to_copy = size - 4 < 31 ? size - 4 : 30;
